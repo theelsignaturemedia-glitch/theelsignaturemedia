@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE E.L Signature Media Production Company | Assem LAALAMI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#070709',
+            onyx: '#0E0E13',
+            royalGold: '#D4AF37',
+            lightGold: '#F3D066',
+            deepGold: '#997A1E',
+            cyberBlue: '#00D2FF',
+            emeraldEye: '#10B981',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+            'gold-strong': '0 0 40px rgba(212, 175, 55, 0.45)',
+            'cyber-glow': '0 0 25px rgba(0, 210, 255, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #070709;
+      color: #F3F4F6;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Grain cinéma subtil */
+    .cinema-grain {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Texte dégradé Or Royal */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #F3D066 0%, #D4AF37 50%, #997A1E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Bordure dorée subtile */
+    .border-gold-subtle {
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .glass-dark {
+      background: rgba(14, 14, 19, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .glass-dark:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+
+    /* Animation pellicule */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    /* Scrollbar personnalisée */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070709;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #D4AF37, #997A1E);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-royalGold selection:text-obsidian">
+
+  <!-- Grain cinéma -->
+  <div class="cinema-grain"></div>
+
+  <!-- Barre de progression de lecture -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-cyberBlue via-royalGold to-lightGold z-50 transition-all duration-150" style="width: 0%;"></div>
+
+  <!-- Notification Toast (Remplace alert) -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+
+  <!-- NAVIGATION FIXE -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-[#040406]/90 backdrop-blur-md border-b border-royalGold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo Officiel Intact -->
+        <a href="#accueil" class="flex items-center gap-3.5 group">
+          <div class="h-12 sm:h-14 rounded-xl overflow-hidden border border-royalGold/40 bg-[#040406] flex items-center justify-center shadow-gold-glow group-hover:border-royalGold transition">
+            <img src="Gemini_Generated_Image_wzgygqwzgygqwzgy.jpeg"
+                 alt="THE E.L Signature Media Production Company - Logo Officiel"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="brand-logo-img h-full w-auto object-contain" />
+            <div style="display:none;" class="px-3 h-full items-center justify-center text-royalGold font-cinzel font-bold text-xs">
+              THE E.L
+            </div>
+          </div>
+          <div class="hidden sm:block">
+            <span class="font-cinzel font-bold text-sm lg:text-base tracking-wider text-gold-gradient block leading-none">THE E.L SIGNATURE</span>
+            <span class="text-[10px] tracking-[0.22em] text-gray-400 uppercase block mt-1">Media Production Company</span>
+          </div>
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-widest uppercase">
+          <a href="#accueil" class="text-gray-300 hover:text-royalGold transition">Accueil</a>
+          <a href="#portfolio" class="text-gray-300 hover:text-royalGold transition">Réalisations</a>
+          <a href="#fondateur" class="text-gray-300 hover:text-royalGold transition">Fondateur & Vision</a>
+          <a href="#expertises" class="text-gray-300 hover:text-royalGold transition">5 Pôles d'Expertise</a>
+          <a href="#methode" class="text-gray-300 hover:text-royalGold transition">Méthode & Livrables</a>
+          <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold hover:shadow-gold-strong transition">Démarrer un Projet</a>
+        </nav>
+
+        <!-- Bouton Mobile -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-lg border border-royalGold/30 text-royalGold hover:bg-royalGold/10">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-onyx/95 border-b border-royalGold/20 px-6 py-6 space-y-4">
+      <a href="#accueil" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-gray-200 hover:text-royalGold">Accueil</a>
+      <a href="#portfolio" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-gray-200 hover:text-royalGold">Réalisations & Galerie</a>
+      <a href="#fondateur" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-gray-200 hover:text-royalGold">Biographie & Vision</a>
+      <a href="#expertises" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-gray-200 hover:text-royalGold">5 Pôles d'Expertise</a>
+      <a href="#methode" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-gray-200 hover:text-royalGold">Livrables & Méthode</a>
+      <a href="#contact" class="mobile-link block w-full text-center py-3 rounded-xl bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold uppercase text-sm">Contact & Devis</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION CINÉMATOGRAPHIQUE -->
+  <section id="accueil" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-[#040406]">
+    <!-- Vidéo Showreel en arrière-plan (Boucle continue sans son) -->
+    <video id="hero-bg-video" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-35 pointer-events-none z-0 transition-opacity duration-700">
+      <source src="showreel.mp4" type="video/mp4" />
+    </video>
+    <!-- Voile cinématographique sombre pour sublimer le logo et les textes -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#040406]/80 via-[#040406]/55 to-[#040406] pointer-events-none z-0"></div>
+
+    <!-- Canvas Particules Dorées & Ondes Cyber -->
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Halos lumineux arrière-plan -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] bg-royalGold/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-cyberBlue/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- Bouton rapide pour charger votre vidéo Showreel en arrière-plan -->
+    <div class="absolute top-24 right-4 sm:right-8 z-20">
+      <label for="hero-bg-video-input" class="cursor-pointer px-4 py-2 rounded-full glass-dark border border-royalGold/50 text-lightGold hover:bg-royalGold hover:text-obsidian text-xs font-semibold transition flex items-center gap-2 shadow-gold-glow" title="Choisir votre vidéo Showreel pour la lecture en boucle en arrière-plan">
+        <i class="fa-solid fa-film"></i>
+        <span id="hero-bg-video-label">Vidéo d'arrière-plan (Showreel)</span>
+      </label>
+      <input type="file" id="hero-bg-video-input" accept="video/*" class="hidden" />
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Badge supérieur -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-dark border border-royalGold/40 mb-7">
+        <span class="w-2 h-2 rounded-full bg-emeraldEye animate-ping"></span>
+        <span class="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-lightGold uppercase">Maison de Production Audiovisuelle • Casablanca</span>
+      </div>
+
+      <!-- Écrin du Logo Officiel Complet (Intact, sans recadrage ni filtre) -->
+      <div class="max-w-4xl mx-auto mb-8 relative group">
+        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyberBlue/30 via-royalGold/50 to-cyberBlue/30 blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
+        <div id="logo-dropzone" class="relative rounded-3xl overflow-hidden bg-[#040406] border border-royalGold/40 shadow-gold-strong min-h-[260px] sm:min-h-[340px] flex flex-col items-center justify-center">
+          <img id="hero-logo-img"
+               src="Gemini_Generated_Image_wzgygqwzgygqwzgy.jpeg"
+               alt="THE E.L Signature Media Production Company by Assem Laalami - Logo Officiel"
+               onerror="handleLogoMissing()"
+               onload="handleLogoLoaded()"
+               class="brand-logo-img w-full h-auto max-h-[520px] object-contain mx-auto block" />
+          
+          <!-- Panneau d'importation bien visible si l'aperçu isolé n'a pas accès au fichier local -->
+          <div id="logo-upload-prompt" class="hidden flex-col items-center justify-center p-8 text-center">
+            <div class="w-16 h-16 rounded-2xl bg-royalGold/15 border border-royalGold/50 flex items-center justify-center text-royalGold mb-4 shadow-gold-glow">
+              <i class="fa-solid fa-crown text-2xl"></i>
+            </div>
+            <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-gold-gradient mb-2">
+              THE E.L SIGNATURE MEDIA PRODUCTION COMPANY
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-300 max-w-md mb-5">
+              L'aperçu en ligne n'a pas accès directement aux fichiers de votre dossier local. Cliquez ci-dessous (ou glissez-déposez l'image ici) pour afficher votre logo officiel tel quel :
+            </p>
+            <label for="official-logo-input" class="cursor-pointer px-6 py-3.5 rounded-full bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold text-xs sm:text-sm uppercase tracking-wider shadow-gold-strong hover:scale-105 transition inline-flex items-center gap-2.5">
+              <i class="fa-solid fa-upload"></i>
+              <span>Afficher mon Logo Officiel (Gemini_Generated_Image...)</span>
+            </label>
+          </div>
+
+          <!-- Bouton discret en bas à droite une fois le logo chargé -->
+          <label id="logo-change-badge" for="official-logo-input" title="Changer ou recharger le fichier logo officiel" class="hidden absolute bottom-3 right-3 cursor-pointer px-3.5 py-1.5 rounded-full bg-obsidian/90 border border-royalGold/50 text-lightGold hover:bg-royalGold hover:text-obsidian text-xs font-semibold transition items-center gap-1.5 shadow-lg">
+            <i class="fa-solid fa-image"></i>
+            <span>Changer le fichier logo</span>
+          </label>
+          <input type="file" id="official-logo-input" accept="image/*" class="hidden" />
+        </div>
+      </div>
+
+      <!-- Titre H1 discret pour le référencement et la hiérarchie éditoriale -->
+      <h1 class="sr-only">THE E.L Signature Media Production Company by Assem Laalami</h1>
+
+      <!-- Slogans Officiels (Anglais & Français) -->
+      <div class="max-w-3xl mx-auto glass-dark rounded-2xl p-5 sm:p-6 border border-royalGold/30 mb-9 shadow-gold-glow">
+        <p class="font-playfair text-base sm:text-xl text-white font-medium tracking-wide mb-1.5">
+          “Where Royal Vision Meets Creative Innovation. <span class="text-lightGold">Your Story, Our Signature.</span>”
+        </p>
+        <p class="text-xs sm:text-sm text-gray-300 italic">
+          « Là où la vision royale rencontre l'innovation créative. Votre histoire, notre signature. »
+        </p>
+      </div>
+
+      <!-- Boutons d'Action -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+        <button onclick="openShowreelModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-royalGold via-lightGold to-royalGold text-obsidian font-bold text-sm uppercase tracking-wider shadow-gold-strong hover:scale-105 transition flex items-center justify-center gap-3">
+          <i class="fa-solid fa-play text-base"></i>
+          <span>Lancer le Showreel Officiel</span>
+        </button>
+
+        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full glass-dark border border-royalGold/50 text-white font-semibold text-sm uppercase tracking-wider hover:bg-royalGold/15 transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-film text-royalGold"></i>
+          <span>Explorer le Portfolio</span>
+        </a>
+
+        <a href="#contact" class="w-full sm:w-auto px-7 py-4 rounded-full border border-cyberBlue/40 text-cyberBlue font-semibold text-sm uppercase tracking-wider hover:bg-cyberBlue/10 transition flex items-center justify-center gap-2">
+          <span>Démarrer un Projet</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Chiffres Clés -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-14 pt-8 border-t border-royalGold/15">
+        <div class="p-3">
+          <div class="font-cinzel text-2xl sm:text-3xl font-bold text-gold-gradient">+20 Ans</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">D'Expertise Cinéma & TV</div>
+        </div>
+        <div class="p-3">
+          <div class="font-cinzel text-2xl sm:text-3xl font-bold text-gold-gradient">5 Pôles</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Production Intégrale 360°</div>
+        </div>
+        <div class="p-3">
+          <div class="font-cinzel text-2xl sm:text-3xl font-bold text-gold-gradient">4K / HDR</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Standards Cinématographiques</div>
+        </div>
+        <div class="p-3">
+          <div class="font-cinzel text-2xl sm:text-3xl font-bold text-gold-gradient">100%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Direction Artistique Sur-Mesure</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. STUDIO & PORTFOLIO INTÉGRÉ (VIDÉOS & PHOTOS) -->
+  <section id="portfolio" class="py-24 relative border-t border-royalGold/15 bg-onyx/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- En-tête Section -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">Galerie & Réalisations</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Notre <span class="text-gold-gradient">Signature Visuelle</span>
+          </h2>
+          <p class="text-gray-400 text-sm sm:text-base mt-3 max-w-2xl">
+            Découvrez nos productions cinématographiques, films institutionnels, capsules digitales et reportages photographiques.
+          </p>
+        </div>
+
+        <!-- Bouton Studio Admin pour ajouter des vidéos/photos -->
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="openStudioModalWithType('video')" class="px-5 py-3 rounded-xl bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:scale-105 transition flex items-center gap-2">
+            <i class="fa-solid fa-video text-base"></i>
+            <span>+ Ajouter une Vidéo</span>
+          </button>
+          <button onclick="openStudioModalWithType('photo')" class="px-5 py-3 rounded-xl glass-dark border border-royalGold/50 text-lightGold font-bold text-xs uppercase tracking-wider hover:bg-royalGold/15 transition flex items-center gap-2">
+            <i class="fa-solid fa-camera text-base"></i>
+            <span>+ Ajouter une Photo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Zone de Glisser-Déposer Rapide directement dans la rubrique -->
+      <div id="portfolio-dropzone" class="mb-8 rounded-2xl border-2 border-dashed border-royalGold/35 bg-obsidian/60 hover:border-royalGold hover:bg-royalGold/5 transition p-6 text-center cursor-pointer" onclick="openStudioModalWithType('video')">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-300">
+          <div class="w-10 h-10 rounded-full bg-royalGold/15 border border-royalGold/40 flex items-center justify-center text-royalGold shrink-0">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <span>
+            <strong class="text-lightGold">Glissez-déposez vos fichiers vidéos (MP4, MOV) ou photos directement ici</strong> ou cliquez pour publier dans votre rubrique vidéo.
+          </span>
+        </div>
+      </div>
+
+      <!-- Filtres de Catégories -->
+      <div class="flex flex-wrap items-center gap-2.5 mb-10" id="portfolio-filters">
+        <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-royalGold text-obsidian transition">
+          Tout (<span id="count-all">0</span>)
+        </button>
+        <button data-filter="cinema" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider glass-dark text-gray-300 hover:text-royalGold transition">
+          Cinéma & Corporate
+        </button>
+        <button data-filter="digital" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider glass-dark text-gray-300 hover:text-royalGold transition">
+          Digital & Réseaux Sociaux
+        </button>
+        <button data-filter="event" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider glass-dark text-gray-300 hover:text-royalGold transition">
+          Événementiel & Live
+        </button>
+        <button data-filter="photo" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider glass-dark text-gray-300 hover:text-royalGold transition">
+          Photographie & Plateaux
+        </button>
+      </div>
+
+      <!-- Grille du Portfolio -->
+      <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Généré dynamiquement par JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BIOGRAPHIE DU FONDATEUR & VISION (ASSEM LAALAMI) -->
+  <section id="fondateur" class="py-24 relative border-t border-royalGold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Colonne Portrait Royal & Upload Photo -->
+        <div class="lg:col-span-5">
+          <div class="relative max-w-md mx-auto">
+            <!-- Cadre doré décoratif -->
+            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-royalGold/40 via-transparent to-cyberBlue/30 blur-md"></div>
+            <div class="relative glass-dark rounded-3xl p-4 border border-royalGold/40 shadow-gold-strong">
+              <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian border border-royalGold/20 group">
+                <img id="founder-photo" 
+                     src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" 
+                     alt="Assem LAALAMI - Fondateur THE E.L Signature Media Production Company" 
+                     class="w-full h-full object-cover object-center transition duration-700 group-hover:scale-105" />
+                
+                <!-- Overlay dégradé bas -->
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
+
+                <!-- Bouton discret pour changer sa photo -->
+                <label for="founder-photo-input" class="absolute top-4 right-4 cursor-pointer px-3.5 py-2 rounded-full bg-obsidian/85 border border-royalGold/50 text-lightGold text-xs font-semibold hover:bg-royalGold hover:text-obsidian transition flex items-center gap-2 shadow-lg">
+                  <i class="fa-solid fa-camera"></i>
+                  <span>Changer ma photo</span>
+                </label>
+                <input type="file" id="founder-photo-input" accept="image/*" class="hidden" />
+
+                <!-- Identité sur le portrait -->
+                <div class="absolute bottom-5 left-5 right-5">
+                  <span class="inline-block px-3 py-1 rounded-full bg-royalGold/20 border border-royalGold/50 text-lightGold text-[10px] font-bold uppercase tracking-widest mb-2">
+                    Fondateur & Gérant Unique
+                  </span>
+                  <h3 class="font-cinzel text-2xl font-bold text-white">Assem LAALAMI</h3>
+                  <p class="text-sm text-royalGold font-medium">عاصم العلمي • Réalisateur & Chef Monteur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne Biographie Complète & Vision -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">01 • Fondateur & Vision</span>
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white leading-tight">
+              Biographie d’<span class="text-gold-gradient">Assem LAALAMI</span>
+            </h2>
+          </div>
+
+          <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+            <strong class="text-white">Assem LAALAMI</strong> est le Fondateur & Gérant Unique de <span class="text-lightGold font-semibold">THE E.L Signature Media Production Company</span>, ainsi que Consultant & Expert en Solutions Audiovisuelles, Stratégie Digitale, Réalisateur et Chef Monteur chevronné fort de <strong class="text-white">plus de 20 ans d'expérience</strong> dans le cinéma, la télévision et l'audiovisuel.
+          </p>
+
+          <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+            Passionné par la narration visuelle, l'esthétique cinématographique et les stratégies de communication contemporaines, il a bâti cette maison de production autour d'une conviction forte : <em class="text-lightGold font-playfair text-base sm:text-lg">chaque marque, chaque institution et chaque projet possède une histoire singulière qui mérite une mise en scène d'exception.</em>
+          </p>
+
+          <!-- Jalons & Parcours d'Excellence -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="glass-dark rounded-2xl p-4 border-l-4 border-royalGold">
+              <div class="text-royalGold font-bold text-xs uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-film mr-1.5"></i> Cinéma, Télévision & Grands Projets
+              </div>
+              <p class="text-xs text-gray-300 leading-relaxed">
+                Chef monteur sur la série télévisée <strong>Al Gharib</strong> (2006), réalisation de la bande-annonce du long-métrage <em>Les Ailes de l'Amour</em> (avec <strong>Abdelhay Laraki</strong> et <strong>Caroline Locardi</strong>), production exécutive de l'émission <em>Foot'Mine</em> pour Evo Sport (via Adweb) et réalisation de l'œuvre musicale patriotique <strong>العيون عينيا / ملحمة الصحراء</strong>.
+              </p>
+            </div>
+
+            <div class="glass-dark rounded-2xl p-4 border-l-4 border-cyberBlue">
+              <div class="text-cyberBlue font-bold text-xs uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-graduation-cap mr-1.5"></i> UM6P & Innovation Digital Learning
+              </div>
+              <p class="text-xs text-gray-300 leading-relaxed">
+                Co-fondateur du Département Audiovisuel et du <strong>Digital Learning Lab (DLL) à l'UM6P</strong> (2016–2025, aux côtés de Taha Marhoum), réalisateur du <strong>1er MOOC arabe et africain</strong> diffusé sur <em>edX</em>, et production de capsules pour <strong>Prépa Digitale, OFPPT, ABS, FGES et MIT</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bloc Vision & Positionnement -->
+          <div class="glass-dark rounded-2xl p-6 border border-royalGold/30 bg-gradient-to-br from-royalGold/10 via-onyx to-obsidian">
+            <h4 class="font-cinzel text-lg font-bold text-lightGold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-eye text-emeraldEye"></i>
+              <span>Vision & Positionnement de la Société</span>
+            </h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              <strong>The E.L Signature Media Production Company</strong> est une société de production audiovisuelle et de création de contenus dédiée aux entreprises, institutions, marques et personnalités souhaitant affirmer une identité visuelle forte. Nous intervenons sur l'ensemble de la chaîne de création, de la conception initiale jusqu'à la diffusion multi-plateformes, sous la supervision artistique directe d'Assem LAALAMI.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CATALOGUE D'ACTIVITÉS & PRESTATIONS (LES 5 PÔLES D'EXCELLENCE) -->
+  <section id="expertises" class="py-24 relative border-t border-royalGold/15 bg-onyx/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">Catalogue Officiel d'Activités</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Nos <span class="text-gold-gradient">5 Pôles d'Excellence</span>
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-4">
+          Une maîtrise intégrale de la chaîne de valeur audiovisuelle, alliant exigence cinématographique et agilité digitale.
+        </p>
+      </div>
+
+      <!-- Navigation par Onglets Interactifs -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-10" id="poles-tabs">
+        <button onclick="selectPole(0)" class="pole-tab active text-left p-4 rounded-2xl border border-royalGold bg-royalGold/15 transition">
+          <div class="text-xs font-bold text-royalGold uppercase tracking-widest mb-1">Pôle 01</div>
+          <div class="font-cinzel font-bold text-sm text-white">Direction Créative & Éditorial</div>
+        </button>
+        <button onclick="selectPole(1)" class="pole-tab text-left p-4 rounded-2xl glass-dark hover:border-royalGold/50 transition">
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Pôle 02</div>
+          <div class="font-cinzel font-bold text-sm text-white">Cinéma & Films Corporate</div>
+        </button>
+        <button onclick="selectPole(2)" class="pole-tab text-left p-4 rounded-2xl glass-dark hover:border-royalGold/50 transition">
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Pôle 03</div>
+          <div class="font-cinzel font-bold text-sm text-white">Digital & Réseaux Sociaux</div>
+        </button>
+        <button onclick="selectPole(3)" class="pole-tab text-left p-4 rounded-2xl glass-dark hover:border-royalGold/50 transition">
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Pôle 04</div>
+          <div class="font-cinzel font-bold text-sm text-white">Événementiel & Captation</div>
+        </button>
+        <button onclick="selectPole(4)" class="pole-tab text-left p-4 rounded-2xl glass-dark hover:border-royalGold/50 transition">
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Pôle 05</div>
+          <div class="font-cinzel font-bold text-sm text-white">Post-Production & Finition</div>
+        </button>
+      </div>
+
+      <!-- Contenu Détaillé du Pôle Actif -->
+      <div id="pole-detail-container" class="glass-dark rounded-3xl p-6 sm:p-10 border border-royalGold/35 shadow-gold-glow">
+        <!-- Rempli dynamiquement par JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SYNTHÈSE DES LIVRABLES & MÉTHODOLOGIE EN 4 ÉTAPES -->
+  <section id="methode" class="py-24 relative border-t border-royalGold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Partie A : Méthodologie d'Accompagnement -->
+      <div class="mb-20">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">Processus & Exigence</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">
+            Méthodologie d’<span class="text-gold-gradient">Accompagnement</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Étape 1 -->
+          <div class="glass-dark rounded-2xl p-6 relative overflow-hidden group">
+            <div class="font-cinzel text-5xl font-black text-royalGold/15 absolute -top-2 right-3 group-hover:text-royalGold/25 transition">01</div>
+            <div class="w-12 h-12 rounded-xl bg-royalGold/15 border border-royalGold/40 flex items-center justify-center text-royalGold mb-5">
+              <i class="fa-solid fa-compass-drafting text-xl"></i>
+            </div>
+            <h3 class="font-cinzel font-bold text-base text-white mb-2">Brief & Diagnostic Créatif</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Compréhension approfondie de vos objectifs stratégiques, de votre cible et de vos contraintes de diffusion.
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="glass-dark rounded-2xl p-6 relative overflow-hidden group">
+            <div class="font-cinzel text-5xl font-black text-royalGold/15 absolute -top-2 right-3 group-hover:text-royalGold/25 transition">02</div>
+            <div class="w-12 h-12 rounded-xl bg-royalGold/15 border border-royalGold/40 flex items-center justify-center text-royalGold mb-5">
+              <i class="fa-solid fa-clapperboard text-xl"></i>
+            </div>
+            <h3 class="font-cinzel font-bold text-base text-white mb-2">Pré-Production & Préparation</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Validation du scénario, découpage technique, planification, mobilisation des équipes et repérages de décors.
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="glass-dark rounded-2xl p-6 relative overflow-hidden group">
+            <div class="font-cinzel text-5xl font-black text-royalGold/15 absolute -top-2 right-3 group-hover:text-royalGold/25 transition">03</div>
+            <div class="w-12 h-12 rounded-xl bg-royalGold/15 border border-royalGold/40 flex items-center justify-center text-royalGold mb-5">
+              <i class="fa-solid fa-video text-xl"></i>
+            </div>
+            <h3 class="font-cinzel font-bold text-base text-white mb-2">Tournage & Réalisation</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Exécution sur le terrain sous la direction artistique d'Assem LAALAMI avec un équipement cinéma de pointe.
+            </p>
+          </div>
+
+          <!-- Étape 4 -->
+          <div class="glass-dark rounded-2xl p-6 relative overflow-hidden group">
+            <div class="font-cinzel text-5xl font-black text-royalGold/15 absolute -top-2 right-3 group-hover:text-royalGold/25 transition">04</div>
+            <div class="w-12 h-12 rounded-xl bg-royalGold/15 border border-royalGold/40 flex items-center justify-center text-royalGold mb-5">
+              <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+            </div>
+            <h3 class="font-cinzel font-bold text-base text-white mb-2">Post-Production & Validation</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Montage narratif, étalonnage cinéma, design sonore et ajustements selon vos retours avant livraison finale.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partie B : Synthèse des Livrables par Pôle -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+          <div>
+            <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">Engagements & Qualité</span>
+            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white">Synthèse des <span class="text-gold-gradient">Livrables par Pôle</span></h3>
+          </div>
+          <span class="text-xs text-gray-400 mt-2 sm:mt-0">Formats optimisés Broadcast, Cinéma & Réseaux Sociaux</span>
+        </div>
+
+        <div class="overflow-hidden rounded-3xl glass-dark border border-royalGold/30">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-royalGold/15 border-b border-royalGold/30">
+                  <th class="py-4 px-6 font-cinzel text-xs sm:text-sm font-bold text-lightGold uppercase tracking-wider w-1/3">Pôle d'Activité</th>
+                  <th class="py-4 px-6 font-cinzel text-xs sm:text-sm font-bold text-lightGold uppercase tracking-wider">Livrables Principaux</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-royalGold/15 text-sm">
+                <tr class="hover:bg-white/[0.02] transition">
+                  <td class="py-5 px-6 font-semibold text-white">Pré-Production & Création</td>
+                  <td class="py-5 px-6 text-gray-300">Note d'intention, scénario, storyboard, découpage technique, plan de tournage, dossier de repérages.</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition">
+                  <td class="py-5 px-6 font-semibold text-white">Films & Publicité</td>
+                  <td class="py-5 px-6 text-gray-300">Films institutionnels, spots publicitaires, brand content, mini-documentaires, portraits de dirigeants.</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition">
+                  <td class="py-5 px-6 font-semibold text-white">Digital & Social Media</td>
+                  <td class="py-5 px-6 text-gray-300">Capsules verticales (9:16) & horizontales (16:9), teasers de lancement, interviews, podcasts vidéo multi-caméras.</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition">
+                  <td class="py-5 px-6 font-semibold text-white">Événementiel & Reportage</td>
+                  <td class="py-5 px-6 text-gray-300">Aftermovies dynamiques, captation intégrale multi-caméras, reportages photographiques haute résolution.</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition">
+                  <td class="py-5 px-6 font-semibold text-white">Post-Production</td>
+                  <td class="py-5 px-6 text-gray-300">Masters HD / 4K, déclinaisons multi-formats, étalonnage cinéma, motion design, habillage VFX, mixage audio normé.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. CONTACT, DEVIS INTERACTIF & SIGNATURE OFFICIELLE -->
+  <section id="contact" class="py-24 relative border-t border-royalGold/20 bg-gradient-to-b from-onyx to-obsidian">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Coordonnées Officielles -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs font-bold tracking-[0.25em] text-royalGold uppercase block mb-2">06 • Contact & Signature</span>
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white leading-tight">
+              Collaborons sur votre <span class="text-gold-gradient">Prochain Projet</span>
+            </h2>
+            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+              Vous souhaitez donner une dimension cinématographique à votre communication, lancer une campagne digitale à fort impact ou immortaliser un événement stratégique ? Échangeons directement autour de votre vision.
+            </p>
+          </div>
+
+          <!-- Carte Identité Dirigeant -->
+          <div class="glass-dark rounded-2xl p-6 border border-royalGold/35 space-y-4">
+            <div class="border-b border-royalGold/20 pb-4">
+              <h3 class="font-cinzel text-xl font-bold text-lightGold">ASSEM LAALAMI <span class="text-sm text-gray-400 font-sans">(عاصم العلمي)</span></h3>
+              <p class="text-xs font-semibold text-gray-300 uppercase tracking-wider mt-1">
+                Fondateur & Gérant Unique • Réalisateur & Chef Monteur
+              </p>
+            </div>
+
+            <div class="space-y-3.5 text-sm">
+              <a href="tel:+212665225101" class="flex items-center gap-3.5 text-gray-200 hover:text-royalGold transition">
+                <div class="w-10 h-10 rounded-xl bg-royalGold/15 border border-royalGold/30 flex items-center justify-center text-royalGold shrink-0">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] text-gray-400 block uppercase">Téléphone & WhatsApp Direct</span>
+                  <span class="font-semibold">+212 6 65 22 51 01</span>
+                </div>
+              </a>
+
+              <a href="mailto:theelsignaturemedia@gmail.com" class="flex items-center gap-3.5 text-gray-200 hover:text-royalGold transition">
+                <div class="w-10 h-10 rounded-xl bg-royalGold/15 border border-royalGold/30 flex items-center justify-center text-royalGold shrink-0">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] text-gray-400 block uppercase">Email Officiel</span>
+                  <span class="font-semibold break-all">theelsignaturemedia@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="flex items-start gap-3.5 text-gray-200">
+                <div class="w-10 h-10 rounded-xl bg-royalGold/15 border border-royalGold/30 flex items-center justify-center text-royalGold shrink-0 mt-0.5">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] text-gray-400 block uppercase">Siège Social • Casablanca</span>
+                  <span class="font-medium text-gray-300">105 Boulevard Rahal El Meskini, 7ème Étage, Appt 71, Casablanca, Maroc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Réseaux Sociaux Officiels -->
+            <div class="pt-4 border-t border-royalGold/20">
+              <span class="text-[11px] text-gray-400 uppercase tracking-wider block mb-3">Suivre The E.L Signature</span>
+              <div class="flex items-center gap-3">
+                <a href="https://www.youtube.com/@Theelsignaturemedia" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-dark border border-royalGold/30 flex items-center justify-center text-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 transition" title="YouTube Officiel">
+                  <i class="fa-brands fa-youtube text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/assem-laalami-5bb1ba299" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-dark border border-royalGold/30 flex items-center justify-center text-gray-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" title="LinkedIn Assem Laalami">
+                  <i class="fa-brands fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/the.e.lsignature.media" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-dark border border-royalGold/30 flex items-center justify-center text-gray-200 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition" title="Instagram Officiel">
+                  <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+                <a href="https://wa.me/212665225101" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl glass-dark border border-royalGold/30 flex items-center justify-center text-gray-200 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition" title="WhatsApp Direct">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de Brief & Devis Interactif -->
+        <div class="lg:col-span-7">
+          <div class="glass-dark rounded-3xl p-6 sm:p-10 border border-royalGold/35 shadow-gold-glow">
+            <h3 class="font-cinzel text-2xl font-bold text-white mb-2">Démarrer un Brief Créatif</h3>
+            <p class="text-xs sm:text-sm text-gray-400 mb-6">Configurez votre projet ci-dessous et transmettez-le instantanément via WhatsApp ou Email.</p>
+
+            <form id="brief-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Votre Nom / Entreprise *</label>
+                  <input type="text" id="client-name" required placeholder="Ex: Karim Bennani / Groupe Atlas" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-royalGold/25 text-white text-sm focus:outline-none focus:border-royalGold transition" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email ou Téléphone *</label>
+                  <input type="text" id="client-contact" required placeholder="contact@entreprise.ma / +212..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-royalGold/25 text-white text-sm focus:outline-none focus:border-royalGold transition" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Pôle de Prestation</label>
+                  <select id="project-type" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-royalGold/25 text-white text-sm focus:outline-none focus:border-royalGold transition">
+                    <option value="Film Institutionnel & Corporate">Film Institutionnel & Corporate</option>
+                    <option value="Spot Publicitaire & Brand Content">Spot Publicitaire & Brand Content</option>
+                    <option value="Production Digitale, Reels & Podcast Vidéo">Production Digitale, Reels & Podcast Vidéo</option>
+                    <option value="Couverture Événementielle & Aftermovie">Couverture Événementielle & Aftermovie</option>
+                    <option value="Post-Production, Étalonnage & VFX">Post-Production, Étalonnage & VFX</option>
+                    <option value="Accompagnement Stratégique Global">Accompagnement Stratégique Global</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Budget Estimé</label>
+                  <select id="project-budget" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-royalGold/25 text-white text-sm focus:outline-none focus:border-royalGold transition">
+                    <option value="À définir lors du diagnostic">À définir lors du diagnostic</option>
+                    <option value="15 000 - 35 000 MAD">15 000 - 35 000 MAD</option>
+                    <option value="35 000 - 80 000 MAD">35 000 - 80 000 MAD</option>
+                    <option value="+ 80 000 MAD (Production Grand Déploiement)">+ 80 000 MAD (Grand Déploiement)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Votre Vision & Objectifs du Projet *</label>
+                <textarea id="project-message" rows="4" required placeholder="Décrivez brièvement votre projet, le message à transmettre, les délais souhaités..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-royalGold/25 text-white text-sm focus:outline-none focus:border-royalGold transition"></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                <button type="button" onclick="sendBriefWhatsApp()" class="flex-1 py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:shadow-lg hover:scale-[1.01] transition flex items-center justify-center gap-2.5">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Envoyer via WhatsApp</span>
+                </button>
+
+                <button type="button" onclick="sendBriefEmail()" class="flex-1 py-4 px-6 rounded-xl bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold text-xs sm:text-sm uppercase tracking-wider hover:shadow-gold-strong hover:scale-[1.01] transition flex items-center justify-center gap-2.5">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Envoyer par Email</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER ROYAL -->
+  <footer class="bg-[#040406] border-t border-royalGold/20 py-14 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div id="footer-logo-box" class="max-w-md mx-auto mb-6 rounded-2xl overflow-hidden border border-royalGold/30 bg-[#040406] shadow-gold-glow">
+        <img src="Gemini_Generated_Image_wzgygqwzgygqwzgy.jpeg"
+             alt="THE E.L Signature Media Production Company - Logo Officiel"
+             onerror="this.parentElement.style.display='none'"
+             class="brand-logo-img w-full h-auto object-contain mx-auto block" />
+      </div>
+      <p class="font-playfair italic text-sm sm:text-base text-lightGold/90 mb-2">
+        “Where Royal Vision Meets Creative Innovation. Your Story, Our Signature.”
+      </p>
+      <p class="text-xs text-gray-400 italic mb-5">
+        « Là où la vision royale rencontre l'innovation créative. Votre histoire, notre signature. »
+      </p>
+      <p class="text-xs text-gray-500">
+        © <span id="current-year"></span> THE E.L Signature Media Production Company — Fondée par Assem LAALAMI (عاصم العلمي). Tous droits réservés • Casablanca, Maroc.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- MODALE STUDIO ADMIN : AJOUTER / GÉRER SES VIDÉOS & PHOTOS               -->
+  <!-- ======================================================================= -->
+  <div id="studio-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="glass-dark border border-royalGold/50 rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative my-8 shadow-gold-strong">
+      <button onclick="toggleStudioDrawer()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-obsidian border border-royalGold/30 text-gray-300 hover:text-royalGold flex items-center justify-center">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs font-bold text-royalGold uppercase tracking-widest">Studio de Gestion Portfolio</span>
+        <h3 class="font-cinzel text-2xl font-bold text-white mt-1">Publier directement dans la Rubrique</h3>
+        <p class="text-xs text-gray-400 mt-1">Sélectionnez un fichier vidéo depuis votre appareil (MP4, MOV, WebM) ou collez un lien YouTube/Vimeo.</p>
+      </div>
+
+      <form id="add-media-form" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Type de Média *</label>
+            <select id="media-type" onchange="updateMediaInputFields()" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-royalGold/30 text-white text-sm">
+              <option value="video">Vidéo (Fichier MP4/MOV ou Lien YouTube)</option>
+              <option value="photo">Photographie (Fichier Image ou URL)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Catégorie *</label>
+            <select id="media-category" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-royalGold/30 text-white text-sm">
+              <option value="cinema">Cinéma & Corporate</option>
+              <option value="digital">Digital & Réseaux Sociaux</option>
+              <option value="event">Événementiel & Live</option>
+              <option value="photo">Photographie & Plateaux</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Champ Upload Fichier Local en Premier (Plus direct !) -->
+        <div class="p-4 rounded-2xl bg-royalGold/10 border border-royalGold/35">
+          <label class="block text-xs font-bold text-lightGold uppercase mb-2" id="media-file-label">
+            <i class="fa-solid fa-film mr-1.5"></i> Choisir un fichier vidéo depuis votre ordinateur / téléphone *
+          </label>
+          <input type="file" id="media-file" accept="video/*,image/*" class="w-full text-xs text-gray-200 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-royalGold file:text-obsidian hover:file:bg-lightGold cursor-pointer" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Titre de la Vidéo / Photo *</label>
+          <input type="text" id="media-title" required placeholder="Ex: Film Institutionnel - Vision 2030" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-royalGold/30 text-white text-sm" />
+        </div>
+
+        <!-- Champ URL Optionnel -->
+        <div id="url-input-group">
+          <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5" id="media-url-label">Ou coller un lien YouTube / Vimeo (Optionnel si fichier choisi)</label>
+          <input type="url" id="media-url" placeholder="https://www.youtube.com/watch?v=..." class="w-full px-4 py-3 rounded-xl bg-obsidian border border-royalGold/30 text-white text-sm" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-300 uppercase mb-1.5">Description / Crédits de réalisation</label>
+          <textarea id="media-desc" rows="2" placeholder="Réalisation, direction artistique, montage & étalonnage par Assem Laalami..." class="w-full px-4 py-3 rounded-xl bg-obsidian border border-royalGold/30 text-white text-sm"></textarea>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-royalGold/20">
+          <button type="button" onclick="resetDefaultPortfolio()" class="text-xs text-red-400 hover:text-red-300 underline">
+            Réinitialiser les exemples par défaut
+          </button>
+          <button type="submit" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:scale-105 transition">
+            Publier dans le Portfolio
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MODALE LIGHTBOX CINÉMA (LECTURE VIDÉO & ZOOM PHOTO)                      -->
+  <!-- ======================================================================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 backdrop-blur-lg p-4">
+    <div class="max-w-5xl w-full relative">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-gray-300 hover:text-royalGold flex items-center gap-2 text-sm font-semibold uppercase tracking-wider">
+        <span>Fermer</span>
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div id="lightbox-content" class="rounded-2xl overflow-hidden bg-obsidian border border-royalGold/40 shadow-gold-strong">
+        <!-- Injecté dynamiquement -->
+      </div>
+
+      <div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-left">
+        <div>
+          <span id="lightbox-cat" class="text-xs font-bold text-royalGold uppercase tracking-widest"></span>
+          <h4 id="lightbox-title" class="font-cinzel text-xl sm:text-2xl font-bold text-white"></h4>
+          <p id="lightbox-desc" class="text-xs sm:text-sm text-gray-400 mt-1"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- SCRIPTS INTERACTIFS                                                     -->
+  <!-- ======================================================================= -->
+  <script>
+    // 1. INITIALISATION & BARRE DE PROGRESSION
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      document.getElementById('scroll-progress').style.width = progress + '%';
+    });
+
+    // Menu mobile
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Notification Toast personnalisée (zéro alert())
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const borderColor = type === 'error' ? 'border-red-500' : 'border-royalGold';
+      const icon = type === 'error' ? 'fa-circle-exclamation text-red-400' : 'fa-crown text-royalGold';
+      toast.className = `pointer-events-auto glass-dark ${borderColor} border px-5 py-3.5 rounded-2xl shadow-gold-strong flex items-center gap-3 text-sm text-white transition-all duration-300 transform translate-y-2 opacity-0`;
+      toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3800);
+    }
+
+    // 2. CANVAS PARTICULES DORÉES HERO SECTION
+    (function initHeroCanvas() {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      let width, height, particles;
+
+      function resize() {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+        particles = Array.from({ length: Math.min(75, Math.floor(width / 18)) }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 2 + 0.5,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: -Math.random() * 0.45 - 0.1,
+          alpha: Math.random() * 0.7 + 0.2,
+          isCyber: Math.random() > 0.85
+        }));
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (const p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.y < -10) p.y = height + 10;
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.isCyber
+            ? `rgba(0, 210, 255, ${p.alpha})`
+            : `rgba(212, 175, 55, ${p.alpha})`;
+          ctx.fill();
+        }
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      animate();
+    })();
+
+    // 2B. VIDÉO SHOWREEL EN ARRIÈRE-PLAN DE L'ACCUEIL (BOUCLE SANS SON)
+    const heroBgVideo = document.getElementById('hero-bg-video');
+    const heroBgVideoInput = document.getElementById('hero-bg-video-input');
+    const heroBgVideoLabel = document.getElementById('hero-bg-video-label');
+    let heroBgVideoUrl = null;
+
+    if (heroBgVideoInput && heroBgVideo) {
+      heroBgVideoInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file || !file.type.startsWith('video/')) {
+          showToast('Veuillez sélectionner un fichier vidéo valide (MP4, MOV, WebM).', 'error');
+          return;
+        }
+        if (heroBgVideoUrl) URL.revokeObjectURL(heroBgVideoUrl);
+        heroBgVideoUrl = URL.createObjectURL(file);
+        heroBgVideo.src = heroBgVideoUrl;
+        heroBgVideo.muted = true;
+        heroBgVideo.loop = true;
+        heroBgVideo.play().then(() => {
+          heroBgVideo.classList.remove('opacity-35');
+          heroBgVideo.classList.add('opacity-55');
+          if (heroBgVideoLabel) heroBgVideoLabel.textContent = 'Changer la vidéo de fond';
+          showToast('Showreel lancé en boucle sans son en arrière-plan !');
+        }).catch(() => {
+          showToast('Vidéo chargée en arrière-plan.');
+        });
+      });
+    }
+
+    // 3. PERSONNALISATION PHOTO DU FONDATEUR & SAUVEGARDE LOGO OFFICIEL (LOCALSTORAGE)
+    function handleLogoMissing() {
+      const heroImg = document.getElementById('hero-logo-img');
+      const promptBox = document.getElementById('logo-upload-prompt');
+      const changeBadge = document.getElementById('logo-change-badge');
+      if (heroImg) heroImg.style.display = 'none';
+      if (promptBox) {
+        promptBox.classList.remove('hidden');
+        promptBox.classList.add('flex');
+      }
+      if (changeBadge) changeBadge.classList.add('hidden');
+    }
+
+    function handleLogoLoaded() {
+      const heroImg = document.getElementById('hero-logo-img');
+      const promptBox = document.getElementById('logo-upload-prompt');
+      const changeBadge = document.getElementById('logo-change-badge');
+      const footerBox = document.getElementById('footer-logo-box');
+      if (heroImg) heroImg.style.display = 'block';
+      if (promptBox) {
+        promptBox.classList.add('hidden');
+        promptBox.classList.remove('flex');
+      }
+      if (changeBadge) {
+        changeBadge.classList.remove('hidden');
+        changeBadge.classList.add('flex');
+      }
+      if (footerBox) footerBox.style.display = 'block';
+    }
+
+    function applyOfficialLogoData(dataUrl) {
+      document.querySelectorAll('.brand-logo-img').forEach(img => {
+        img.style.display = 'block';
+        if (img.nextElementSibling && img.nextElementSibling.tagName === 'DIV') {
+          img.nextElementSibling.style.display = 'none';
+        }
+        img.src = dataUrl;
+      });
+      handleLogoLoaded();
+    }
+
+    function processLogoFile(file) {
+      if (!file || !file.type.startsWith('image/')) {
+        showToast('Veuillez sélectionner un fichier image valide (JPEG, PNG, WebP).', 'error');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        applyOfficialLogoData(evt.target.result);
+        try {
+          localStorage.setItem('elsignature_official_logo', evt.target.result);
+          showToast('Votre logo officiel est affiché et mémorisé !');
+        } catch (err) {
+          showToast('Logo affiché ! (Pensez à placer le fichier image dans le même dossier que index.html lors de la mise en ligne).');
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    const officialLogoInput = document.getElementById('official-logo-input');
+    const savedOfficialLogo = localStorage.getItem('elsignature_official_logo');
+    if (savedOfficialLogo) {
+      applyOfficialLogoData(savedOfficialLogo);
+    }
+
+    if (officialLogoInput) {
+      officialLogoInput.addEventListener('change', (e) => {
+        processLogoFile(e.target.files[0]);
+      });
+    }
+
+    // Support du glisser-déposer directement sur l'encadré du logo
+    const logoDropzone = document.getElementById('logo-dropzone');
+    if (logoDropzone) {
+      logoDropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        logoDropzone.classList.add('border-lightGold', 'bg-royalGold/10');
+      });
+      logoDropzone.addEventListener('dragleave', () => {
+        logoDropzone.classList.remove('border-lightGold', 'bg-royalGold/10');
+      });
+      logoDropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        logoDropzone.classList.remove('border-lightGold', 'bg-royalGold/10');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          processLogoFile(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    const founderPhotoEl = document.getElementById('founder-photo');
+    const founderPhotoInput = document.getElementById('founder-photo-input');
+    const savedFounderPhoto = localStorage.getItem('elsignature_founder_photo');
+    if (savedFounderPhoto) {
+      founderPhotoEl.src = savedFounderPhoto;
+    }
+
+    founderPhotoInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          localStorage.setItem('elsignature_founder_photo', evt.target.result);
+          founderPhotoEl.src = evt.target.result;
+          showToast('Portrait officiel mis à jour avec succès !');
+        } catch (err) {
+          showToast('Image trop volumineuse pour le stockage local. Utilisez une image < 3 Mo.', 'error');
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // 4. GESTION DU PORTFOLIO DYNAMIQUE (VIDÉOS & PHOTOS)
+    const defaultPortfolioItems = [
+      {
+        id: 'item-1',
+        type: 'video',
+        category: 'cinema',
+        title: 'Showreel Officiel — THE E.L Signature',
+        desc: 'Direction artistique, réalisation, montage narratif & étalonnage cinéma par Assem LAALAMI.',
+        thumb: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://www.youtube.com/@Theelsignaturemedia',
+        isExternalChannel: true
+      },
+      {
+        id: 'item-2',
+        type: 'video',
+        category: 'cinema',
+        title: 'Production Cinéma & Fiction TV (Série Al Gharib)',
+        desc: 'Chef monteur et supervision post-production sur des œuvres dramatiques et longs-métrages de prestige.',
+        thumb: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://www.youtube.com/@Theelsignaturemedia',
+        isExternalChannel: true
+      },
+      {
+        id: 'item-3',
+        type: 'video',
+        category: 'digital',
+        title: 'Studio Podcast Vidéo Noir & Or — Multi-Caméras',
+        desc: 'Conception de plateau podcast haute définition, éclairage cinéma et formats capsules verticales.',
+        thumb: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://www.youtube.com/@Theelsignaturemedia',
+        isExternalChannel: true
+      },
+      {
+        id: 'item-4',
+        type: 'video',
+        category: 'event',
+        title: 'Captation Scénique & Aftermovie Corporate VIP',
+        desc: 'Réalisation multi-caméras, prises de vues aériennes drone et montage rythmé pour grands événements.',
+        thumb: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://www.youtube.com/@Theelsignaturemedia',
+        isExternalChannel: true
+      },
+      {
+        id: 'item-5',
+        type: 'photo',
+        category: 'photo',
+        title: 'Plateau de Tournage Publicitaire & Grue Cinéma',
+        desc: 'Tournages publicitaires à grand déploiement, direction de la photographie et mise en scène.',
+        thumb: 'https://images.unsplash.com/photo-1579632652768-6cb9dcf85912?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://images.unsplash.com/photo-1579632652768-6cb9dcf85912?auto=format&fit=crop&w=1400&q=90'
+      },
+      {
+        id: 'item-6',
+        type: 'photo',
+        category: 'photo',
+        title: 'Suite d’Étalonnage & Post-Production 4K HDR',
+        desc: 'Color grading cinéma, motion design, VFX et mixage audio aux normes internationales.',
+        thumb: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1400&q=90'
+      }
+    ];
+
+    let portfolioItems = JSON.parse(localStorage.getItem('elsignature_portfolio')) || [...defaultPortfolioItems];
+    let currentFilter = 'all';
+
+    const categoryLabels = {
+      cinema: 'Cinéma & Corporate',
+      digital: 'Digital & Réseaux Sociaux',
+      event: 'Événementiel & Live',
+      photo: 'Photographie & Plateaux'
+    };
+
+    function savePortfolio() {
+      try {
+        localStorage.setItem('elsignature_portfolio', JSON.stringify(portfolioItems));
+      } catch (e) {
+        showToast('Espace de stockage local saturé. Privilégiez les liens YouTube/Vimeo ou images compressées.', 'error');
+      }
+    }
+
+    function extractYouTubeId(url) {
+      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)([^#&?]*).*/;
+      const match = url.match(regExp);
+      return (match && match[2].length === 11) ? match[2] : null;
+    }
+
+    function renderPortfolio() {
+      const grid = document.getElementById('portfolio-grid');
+      document.getElementById('count-all').textContent = portfolioItems.length;
+
+      const filtered = currentFilter === 'all'
+        ? portfolioItems
+        : portfolioItems.filter(item => item.category === currentFilter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16 glass-dark rounded-3xl border border-royalGold/20">
+            <i class="fa-solid fa-film text-4xl text-royalGold/50 mb-3"></i>
+            <p class="text-gray-300 font-medium">Aucune réalisation dans cette catégorie pour le moment.</p>
+            <button onclick="toggleStudioDrawer()" class="mt-4 px-5 py-2.5 rounded-xl bg-royalGold text-obsidian text-xs font-bold uppercase">
+              + Ajouter un contenu maintenant
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isVideo = item.type === 'video';
+        return `
+          <div class="group glass-dark rounded-2xl overflow-hidden border border-royalGold/25 hover:border-royalGold/70 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-gold-glow">
+            <div>
+              <!-- Vignette Média -->
+              <div onclick="openLightbox('${item.id}')" class="relative aspect-video overflow-hidden bg-obsidian cursor-pointer">
+                <img src="${item.thumb}" alt="${item.title}" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" onerror="this.src='https://placehold.co/800x450/0E0E13/D4AF37?text=THE+E.L+SIGNATURE'" />
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent opacity-80"></div>
+
+                <!-- Badge Catégorie -->
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-obsidian/85 border border-royalGold/40 text-[10px] font-bold uppercase tracking-wider text-lightGold">
+                  ${categoryLabels[item.category] || 'Production'}
+                </span>
+
+                <!-- Icône Play ou Zoom -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-14 h-14 rounded-full bg-royalGold/90 text-obsidian flex items-center justify-center shadow-gold-strong transform group-hover:scale-110 transition">
+                    <i class="fa-solid ${isVideo ? 'fa-play ml-0.5' : 'fa-expand'} text-lg"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Infos -->
+              <div class="p-5">
+                <h3 onclick="openLightbox('${item.id}')" class="font-cinzel font-bold text-lg text-white group-hover:text-lightGold transition cursor-pointer line-clamp-1">
+                  ${item.title}
+                </h3>
+                <p class="text-xs text-gray-400 mt-2 line-clamp-2 leading-relaxed">
+                  ${item.desc || 'Production signée THE E.L Signature Media Production Company.'}
+                </p>
+              </div>
+            </div>
+
+            <!-- Pied de carte -->
+            <div class="px-5 pb-4 pt-2 border-t border-royalGold/10 flex items-center justify-between text-xs">
+              <button onclick="openLightbox('${item.id}')" class="text-royalGold font-semibold hover:underline flex items-center gap-1.5">
+                <span>${isVideo ? 'Regarder la vidéo' : 'Agrandir la photo'}</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+              <button onclick="deletePortfolioItem('${item.id}')" class="text-gray-500 hover:text-red-400 transition p-1" title="Supprimer cet élément">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Filtres cliquables
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-royalGold', 'text-obsidian', 'font-bold');
+          b.classList.add('glass-dark', 'text-gray-300', 'font-semibold');
+        });
+        btn.classList.remove('glass-dark', 'text-gray-300', 'font-semibold');
+        btn.classList.add('bg-royalGold', 'text-obsidian', 'font-bold');
+        currentFilter = btn.dataset.filter;
+        renderPortfolio();
+      });
+    });
+
+    // Modale Studio Admin
+    function toggleStudioDrawer() {
+      const modal = document.getElementById('studio-modal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+    }
+
+    function openStudioModalWithType(type) {
+      const select = document.getElementById('media-type');
+      select.value = type;
+      if (type === 'photo') {
+        document.getElementById('media-category').value = 'photo';
+      } else {
+        document.getElementById('media-category').value = 'cinema';
+      }
+      updateMediaInputFields();
+      const modal = document.getElementById('studio-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function updateMediaInputFields() {
+      const type = document.getElementById('media-type').value;
+      const label = document.getElementById('media-url-label');
+      const fileLabel = document.getElementById('media-file-label');
+      const fileInput = document.getElementById('media-file');
+      const input = document.getElementById('media-url');
+      if (type === 'video') {
+        fileLabel.innerHTML = '<i class="fa-solid fa-film mr-1.5"></i> Choisir un fichier vidéo depuis votre ordinateur / téléphone (MP4, MOV, WebM)';
+        fileInput.accept = 'video/*';
+        label.textContent = 'Ou coller un lien YouTube / Vimeo (Optionnel si fichier choisi)';
+        input.placeholder = 'https://www.youtube.com/watch?v=...';
+      } else {
+        fileLabel.innerHTML = '<i class="fa-solid fa-camera mr-1.5"></i> Choisir une photo depuis votre ordinateur / téléphone';
+        fileInput.accept = 'image/*';
+        label.textContent = 'Ou coller l’URL de la photo (Optionnel si fichier choisi)';
+        input.placeholder = 'https://...';
+      }
+    }
+
+    // Génère automatiquement une miniature à partir d'un fichier vidéo local
+    function captureVideoThumbnail(videoObjectUrl) {
+      return new Promise((resolve) => {
+        const tempVideo = document.createElement('video');
+        tempVideo.src = videoObjectUrl;
+        tempVideo.muted = true;
+        tempVideo.playsInline = true;
+        tempVideo.currentTime = 1;
+        tempVideo.onloadeddata = () => {
+          tempVideo.currentTime = Math.min(1, tempVideo.duration / 2 || 0.5);
+        };
+        tempVideo.onseeked = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = tempVideo.videoWidth || 800;
+            canvas.height = tempVideo.videoHeight || 450;
+            canvas.getContext('2d').drawImage(tempVideo, 0, 0, canvas.width, canvas.height);
+            resolve(canvas.toDataURL('image/jpeg', 0.8));
+          } catch (e) {
+            resolve('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80');
+          }
+        };
+        tempVideo.onerror = () => resolve('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80');
+      });
+    }
+
+    // Glisser-déposer direct dans la rubrique Réalisations
+    const portfolioDropzone = document.getElementById('portfolio-dropzone');
+    if (portfolioDropzone) {
+      portfolioDropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        portfolioDropzone.classList.add('border-royalGold', 'bg-royalGold/15');
+      });
+      portfolioDropzone.addEventListener('dragleave', () => {
+        portfolioDropzone.classList.remove('border-royalGold', 'bg-royalGold/15');
+      });
+      portfolioDropzone.addEventListener('drop', async (e) => {
+        e.preventDefault();
+        portfolioDropzone.classList.remove('border-royalGold', 'bg-royalGold/15');
+        const files = Array.from(e.dataTransfer.files || []);
+        for (const file of files) {
+          const cleanTitle = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+          if (file.type.startsWith('video/')) {
+            const blobUrl = URL.createObjectURL(file);
+            const thumb = await captureVideoThumbnail(blobUrl);
+            portfolioItems.unshift({
+              id: 'local-vid-' + Date.now() + Math.random(),
+              type: 'video',
+              category: 'cinema',
+              title: cleanTitle,
+              desc: 'Vidéo ajoutée directement dans la rubrique • THE E.L Signature.',
+              thumb,
+              url: blobUrl,
+              isLocalBlob: true
+            });
+          } else if (file.type.startsWith('image/')) {
+            const blobUrl = URL.createObjectURL(file);
+            portfolioItems.unshift({
+              id: 'local-img-' + Date.now() + Math.random(),
+              type: 'photo',
+              category: 'photo',
+              title: cleanTitle,
+              desc: 'Photographie ajoutée directement dans la rubrique • THE E.L Signature.',
+              thumb: blobUrl,
+              url: blobUrl,
+              isLocalBlob: true
+            });
+          }
+        }
+        if (files.length > 0) {
+          renderPortfolio();
+          showToast(`${files.length} fichier(s) ajouté(s) directement dans votre galerie !`);
+        }
+      });
+    }
+
+    document.getElementById('add-media-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const type = document.getElementById('media-type').value;
+      const category = document.getElementById('media-category').value;
+      const title = document.getElementById('media-title').value.trim();
+      const url = document.getElementById('media-url').value.trim();
+      const desc = document.getElementById('media-desc').value.trim();
+      const fileInput = document.getElementById('media-file');
+      const file = fileInput.files[0];
+
+      if (file) {
+        if (file.type.startsWith('video/')) {
+          // Lecture directe instantanée sans limite de taille via ObjectURL
+          const blobUrl = URL.createObjectURL(file);
+          const autoThumb = await captureVideoThumbnail(blobUrl);
+          portfolioItems.unshift({
+            id: 'custom-' + Date.now(),
+            type: 'video',
+            category,
+            title,
+            desc: desc || 'Réalisation vidéo — THE E.L Signature Media Production Company.',
+            thumb: autoThumb,
+            url: blobUrl,
+            isLocalBlob: true
+          });
+          renderPortfolio();
+          document.getElementById('add-media-form').reset();
+          toggleStudioDrawer();
+          showToast('Votre vidéo est publiée et prête à être lue dans la rubrique !');
+        } else {
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            portfolioItems.unshift({
+              id: 'custom-' + Date.now(),
+              type: type,
+              category,
+              title,
+              desc: desc || 'Production — THE E.L Signature Media Production Company.',
+              thumb: evt.target.result,
+              url: type === 'video' && url ? url : evt.target.result
+            });
+            savePortfolio();
+            renderPortfolio();
+            document.getElementById('add-media-form').reset();
+            toggleStudioDrawer();
+            showToast('Votre réalisation a été publiée dans le portfolio !');
+          };
+          reader.readAsDataURL(file);
+        }
+      } else {
+        if (!url) {
+          showToast('Veuillez sélectionner un fichier vidéo/photo ou coller un lien URL.', 'error');
+          return;
+        }
+        let thumb = 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80';
+        if (type === 'video') {
+          const ytId = extractYouTubeId(url);
+          if (ytId) thumb = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+        } else {
+          thumb = url;
+        }
+        portfolioItems.unshift({
+          id: 'custom-' + Date.now(),
+          type,
+          category,
+          title,
+          desc,
+          thumb,
+          url
+        });
+        savePortfolio();
+        renderPortfolio();
+        document.getElementById('add-media-form').reset();
+        toggleStudioDrawer();
+        showToast('Votre réalisation a été publiée dans le portfolio !');
+      }
+    });
+
+    function deletePortfolioItem(id) {
+      portfolioItems = portfolioItems.filter(i => i.id !== id);
+      savePortfolio();
+      renderPortfolio();
+      showToast('Élément retiré du portfolio.');
+    }
+
+    function resetDefaultPortfolio() {
+      portfolioItems = [...defaultPortfolioItems];
+      savePortfolio();
+      renderPortfolio();
+      toggleStudioDrawer();
+      showToast('Galerie réinitialisée avec les réalisations officielles.');
+    }
+
+    // 5. LIGHTBOX CINÉMA & SHOWREEL
+    function openLightbox(id) {
+      const item = portfolioItems.find(i => i.id === id);
+      if (!item) return;
+
+      const modal = document.getElementById('lightbox-modal');
+      const content = document.getElementById('lightbox-content');
+      document.getElementById('lightbox-cat').textContent = categoryLabels[item.category] || 'Réalisation';
+      document.getElementById('lightbox-title').textContent = item.title;
+      document.getElementById('lightbox-desc').textContent = item.desc || '';
+
+      if (item.type === 'video') {
+        const ytId = extractYouTubeId(item.url);
+        if (ytId) {
+          content.innerHTML = `
+            <div class="aspect-video w-full">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}?autoplay=1" title="${item.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          `;
+        } else if (item.isExternalChannel) {
+          content.innerHTML = `
+            <div class="relative aspect-video w-full bg-obsidian flex flex-col items-center justify-center p-8 text-center">
+              <img src="${item.thumb}" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+              <div class="relative z-10 max-w-lg">
+                <div class="w-16 h-16 rounded-full bg-royalGold text-obsidian flex items-center justify-center mx-auto mb-4 shadow-gold-strong">
+                  <i class="fa-brands fa-youtube text-2xl"></i>
+                </div>
+                <h4 class="font-cinzel text-2xl font-bold text-white mb-2">Chaîne Officielle THE E.L Signature</h4>
+                <p class="text-sm text-gray-300 mb-6">Retrouvez l'intégralité de nos showreels, films et productions sur notre chaîne YouTube officielle, ou ajoutez vos liens vidéos directs via le bouton Studio Admin.</p>
+                <a href="https://www.youtube.com/@Theelsignaturemedia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-royalGold to-lightGold text-obsidian font-bold text-xs uppercase tracking-wider shadow-gold-glow">
+                  <span>Ouvrir la Chaîne YouTube</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          `;
+        } else {
+          content.innerHTML = `
+            <div class="aspect-video w-full bg-black">
+              <video src="${item.url}" controls autoplay class="w-full h-full"></video>
+            </div>
+          `;
+        }
+      } else {
+        content.innerHTML = `
+          <div class="max-h-[75vh] flex items-center justify-center bg-black">
+            <img src="${item.url}" alt="${item.title}" class="max-h-[75vh] w-auto object-contain" />
+          </div>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function openShowreelModal() {
+      if (portfolioItems.length > 0) {
+        openLightbox(portfolioItems[0].id);
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      document.getElementById('lightbox-content').innerHTML = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 6. CATALOGUE D'ACTIVITÉS : LES 5 PÔLES D'EXCELLENCE
+    const polesData = [
+      {
+        num: '01',
+        title: 'Direction Créative, Conception & Développement Éditorial',
+        subtitle: 'Architecture narrative et visuelle sur-mesure avant chaque tournage.',
+        icon: 'fa-pen-nib',
+        image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80',
+        intro: 'Avant chaque tournage, nos équipes conçoivent l’architecture narrative et visuelle de votre projet afin de garantir un message clair, cohérent et aligné avec votre positionnement.',
+        items: [
+          { name: 'Écriture & Scénarisation', text: 'Rédaction de concepts originaux, synopsis, scripts voix-off, dialogues et découpages techniques.' },
+          { name: 'Direction Artistique & Storyboarding', text: 'Définition de l’univers visuel, moodboards, chartes esthétiques, repérages de décors et direction de casting.' },
+          { name: 'Conseil en Stratégie Vidéo', text: 'Accompagnement éditorial pour structurer des campagnes de communication annuelles ou des lancements de produits.' }
+        ]
+      },
+      {
+        num: '02',
+        title: 'Production Cinématographique & Films Corporate',
+        subtitle: 'Productions haut de gamme adaptées aux exigences des dirigeants et grands groupes.',
+        icon: 'fa-film',
+        image: 'https://images.unsplash.com/photo-1579632652768-6cb9dcf85912?auto=format&fit=crop&w=900&q=80',
+        intro: 'Nous réalisons des productions audiovisuelles d’envergure cinématographique pour sublimer votre image institutionnelle et commerciale.',
+        items: [
+          { name: 'Films Institutionnels & Corporate', text: 'Présentation de votre entreprise, de votre savoir-faire, de vos infrastructures et de vos valeurs.' },
+          { name: 'Spots Publicitaires & Brand Content', text: 'Réalisation de films publicitaires destinés à la télévision, au cinéma et aux campagnes digitales.' },
+          { name: 'Documentaires & Reportages', text: 'Récits immersifs, portraits de dirigeants, rétrospectives d’entreprise et documentaires thématiques.' },
+          { name: 'Prises de Vues Spécialisées & Drone', text: 'Captations haute définition, éclairage cinéma, prise de son professionnelle et prises de vues aériennes.' }
+        ]
+      },
+      {
+        num: '03',
+        title: 'Production Digitale & Contenus Réseaux Sociaux',
+        subtitle: 'Formats agiles et percutants pour maximiser l’engagement de vos audiences.',
+        icon: 'fa-mobile-screen-button',
+        image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80',
+        intro: 'Nous concevons des formats optimisés pour capter l’attention dès les premières secondes sur l’ensemble des plateformes digitales.',
+        items: [
+          { name: 'Capsules Courtes & Formats Verticaux', text: 'Création de vidéos optimisées pour LinkedIn, Instagram, TikTok et YouTube.' },
+          { name: 'Campagnes de Lancement & Teasers', text: 'Formats courts dynamiques pour accompagner la sortie de nouveaux produits, services ou événements.' },
+          { name: 'Interviews & Podcasts Vidéo Noir & Or', text: 'Studio podcast multi-caméras haute définition pour valoriser vos experts et retours d’expérience.' }
+        ]
+      },
+      {
+        num: '04',
+        title: 'Couverture Événementielle & Captation Live',
+        subtitle: 'La mémoire visuelle et le rayonnement de vos événements de prestige.',
+        icon: 'fa-video',
+        image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80',
+        intro: 'Nous immortalisons l’intensité et le prestige de vos manifestations professionnelles, institutionnelles et culturelles.',
+        items: [
+          { name: 'Aftermovies & Films Récapitulatifs', text: 'Restitution dynamique de l’énergie et des temps forts de vos salons, galas, séminaires et inaugurations.' },
+          { name: 'Captation Multi-Caméras', text: 'Enregistrement intégral de conférences, tables rondes, conventions et prises de parole officielles.' },
+          { name: 'Reportage Photographique', text: 'Couverture photo professionnelle complémentaire pour vos relations presse et votre communication interne.' }
+        ]
+      },
+      {
+        num: '05',
+        title: 'Post-Production, Habillage & Finition',
+        subtitle: 'La signature finale où le rythme, la couleur et le son subliment vos images.',
+        icon: 'fa-sliders',
+        image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80',
+        intro: 'Dans nos studios de post-production, chaque plan est sculpté avec une précision chirurgicale sous la direction d’Assem LAALAMI.',
+        items: [
+          { name: 'Montage Narratif & Rythmique', text: 'Construction précise du récit et déclinaison en plusieurs durées (version longue, teasers, formats sociaux).' },
+          { name: 'Étalonnage Cinéma (Color Grading)', text: 'Travail approfondi sur la colorimétrie et les contrastes pour conférer une esthétique noble et homogène.' },
+          { name: 'Motion Design, Habillage & VFX', text: 'Création de génériques, titres animés, infographies, sous-titrage multilingue et effets visuels.' },
+          { name: 'Design Sonore & Mixage Audio', text: 'Nettoyage des voix, habillage musical sur-mesure, bruitages et mixage conforme aux normes broadcast.' }
+        ]
+      }
+    ];
+
+    function selectPole(index) {
+      const tabs = document.querySelectorAll('.pole-tab');
+      tabs.forEach((t, idx) => {
+        if (idx === index) {
+          t.className = 'pole-tab active text-left p-4 rounded-2xl border border-royalGold bg-royalGold/15 transition';
+          t.querySelector('div:first-child').className = 'text-xs font-bold text-royalGold uppercase tracking-widest mb-1';
+        } else {
+          t.className = 'pole-tab text-left p-4 rounded-2xl glass-dark hover:border-royalGold/50 transition';
+          t.querySelector('div:first-child').className = 'text-xs font-bold text-gray-400 uppercase tracking-widest mb-1';
+        }
+      });
+
+      const pole = polesData[index];
+      const container = document.getElementById('pole-detail-container');
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-royalGold/15 border border-royalGold/40 text-lightGold text-xs font-bold uppercase tracking-widest">
+              <i class="fa-solid ${pole.icon}"></i>
+              <span>Pôle d'Excellence ${pole.num}</span>
+            </div>
+            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white">${pole.title}</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">${pole.intro}</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              ${pole.items.map(sub => `
+                <div class="p-4 rounded-2xl bg-obsidian/80 border border-royalGold/20">
+                  <h4 class="font-semibold text-lightGold text-sm mb-1 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-royalGold"></span>
+                    <span>${sub.name}</span>
+                  </h4>
+                  <p class="text-xs text-gray-400 leading-relaxed">${sub.text}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl overflow-hidden border border-royalGold/30 aspect-[4/3] shadow-gold-glow">
+              <img src="${pole.image}" alt="${pole.title}" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <p class="text-xs text-lightGold font-medium">${pole.subtitle}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // 7. ENVOI DE BRIEF PROJET (WHATSAPP & EMAIL)
+    function getBriefData() {
+      const name = document.getElementById('client-name').value.trim();
+      const contact = document.getElementById('client-contact').value.trim();
+      const type = document.getElementById('project-type').value;
+      const budget = document.getElementById('project-budget').value;
+      const message = document.getElementById('project-message').value.trim();
+
+      if (!name || !contact || !message) {
+        showToast('Veuillez remplir votre nom, contact et description du projet.', 'error');
+        return null;
+      }
+      return { name, contact, type, budget, message };
+    }
+
+    function sendBriefWhatsApp() {
+      const data = getBriefData();
+      if (!data) return;
+      const text = `Bonjour Assem LAALAMI (THE E.L Signature),\n\nJe souhaite démarrer un projet audiovisuel :\n• *Nom / Société :* ${data.name}\n• *Contact :* ${data.contact}\n• *Pôle :* ${data.type}\n• *Budget estimé :* ${data.budget}\n• *Vision du projet :* ${data.message}`;
+      const url = `https://wa.me/212665225101?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+      showToast('Redirection vers WhatsApp (+212 6 65 22 51 01)...');
+    }
+
+    function sendBriefEmail() {
+      const data = getBriefData();
+      if (!data) return;
+      const subject = `Nouveau Brief Projet — ${data.type} (${data.name})`;
+      const body = `Bonjour Assem LAALAMI,\n\nVoici les détails de notre projet pour THE E.L Signature Media Production Company :\n\n- Nom / Entreprise : ${data.name}\n- Contact : ${data.contact}\n- Pôle souhaité : ${data.type}\n- Budget estimé : ${data.budget}\n\nDescription & Objectifs :\n${data.message}\n\nCordialement,\n${data.name}`;
+      window.location.href = `mailto:theelsignaturemedia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      showToast('Ouverture de votre messagerie vers theelsignaturemedia@gmail.com...');
+    }
+
+    // Initialisation au chargement
+    renderPortfolio();
+    selectPole(0);
+  </script>
+</body>
+</html>
